@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Stylesheets go here. -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1>Notemeister 5000</h1>
+
+
+
+    </div>
+    <div id="signup_form">
+        <h1>New Post</h1>
+        <form id="forms" action="" method="GET">
+            <div class="form_group">
+                <label for="title">Title</label>
+                <input type="title" name="title" placeholder="Your title" />
+            </div>
+            <div class="form_group">
+                <label for="title">Body</label>
+                <input type="body" name="body" placeholder="Your note" />
+            </div>
+            <div class="form_group">
+                <label for="title">Tags</label>
+                <input type="tag" name="tag" placeholder="Your tag" />
+            </div>
+            <input type="submit" name="submit" value="Click Here!" class="btn btn-primary" />
+        </form>
+    </div>
+
+    <div id="handlebar_notes">
+
+    </div>
+    <!-- Content goes here. -->
+    <!-- Scripts go here. -->
+    <script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+    <!-- <script id="note-template" type="text/x-handlebars-template">
+        <div class="entry">
+            <h2>{{title}}</h2>
+            <div class="body">
+                {{body}}
+            </div>
+        </div>
+        <div>
+            {{#each tags}}
+            <button class="tag btn btn-xs btn-inline btn-info no padding">{{name}}</button>
+            {(/each)}
+        </div>
+
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
