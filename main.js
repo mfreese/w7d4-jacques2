@@ -14,15 +14,30 @@ $.getJSON('https://aqueous-headland-47940.herokuapp.com/api/notes')
  })
 
 
-$('#notes').on('click', '.tag', function(x){
-  $.x.preventDefault()
+
+
+
+$('#notie').on('submit', function(y){
+  y.preventDefault()
+  $.post('https://aqueous-headland-47940.herokuapp.com/api/notes',
+  $(this).serializeArray())
+  .done(function(response){
+    var display_notes = template(response)
+    $('#handlebar_notes').prepend(display_notes)
+  })
+})
+
+
+$('#handlebar_notes').on('click', '.tag', function(x){
+  x.preventDefault()
+  $('#handlebar_notes').html('')
   $.getJSON('https://aqueous-headland-47940.herokuapp.com/api/notes/tag/' +
   $(this).html())
   .then(function(response){
-    $('headline').append(': ' + response.tag.name)
-    response.tag.notes.forEach(function (note){
-    var display_notes = notes_template(note)
-    $('notes').prepend(display_none)
+    $('#headline').append(': ' + response.tag.name)
+    response.tag.notes.forEach(function(note){
+    var display_notes = template(note)
+    $('#handlebar_notes').prepend(display_notes)
   })
 })
 })

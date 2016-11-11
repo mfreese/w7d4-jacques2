@@ -20,9 +20,9 @@
     <div class="container">
 
     </div>
-    <div id="signup_form">
+    <div class="text-center" id="Note_form">
         <h1>New Post</h1>
-        <form id="forms" action="" method="GET">
+        <form id="notie">
             <div class="form_group">
                 <label for="title">Title</label>
                 <input type="title" name="title" placeholder="Your title" />
@@ -33,13 +33,13 @@
             </div>
             <div class="form_group">
                 <label for="title">Tags</label>
-                <input type="tag" name="tag" placeholder="Your tag" />
+                <input type="tag" name="tags" placeholder="Your tag" />
             </div>
             <input type="submit" name="submit" value="Click Here!" class="btn btn-primary" />
         </form>
     </div>
 
-    <div id="handlebar_notes">
+    <div class="text-center" id="handlebar_notes">
 
     </div>
     <!-- Content goes here. -->
@@ -52,12 +52,13 @@
     </div>
     <div id="tag" class="col">
       {{#each tags}}
-      <button class= 'tags btn btn-xs btn-inline'> {{name}}</button>{{/each}}
+      <button class= 'tag btn btn-xs btn-inline'>{{name}}</button>
+      {{/each}}
     </div>
   </div>
 </script>
     <!-- <script id="note-template" type="text/x-handlebars-template">
-    
+
 
     </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
