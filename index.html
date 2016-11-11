@@ -15,12 +15,9 @@
 </head>
 
 <body>
+<h1 class="text-center" id="headline"> Notemeister 5000
+</h1>
     <div class="container">
-
-
-        <h1>Notemeister 5000</h1>
-
-
 
     </div>
     <div id="signup_form">
@@ -53,20 +50,14 @@
     <div class="body">
       {{body}}
     </div>
+    <div id="tag" class="col">
+      {{#each tags}}
+      <button class= 'tags btn btn-xs btn-inline'> {{name}}</button>{{/each}}
+    </div>
   </div>
 </script>
     <!-- <script id="note-template" type="text/x-handlebars-template">
-        <div class="entry">
-            <h2>{{title}}</h2>
-            <div class="body">
-                {{body}}
-            </div>
-        </div>
-        <div>
-            {{#each tags}}
-            <button class="tag btn btn-xs btn-inline btn-info no padding">{{name}}</button>
-            {(/each)}
-        </div>
+    
 
     </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
